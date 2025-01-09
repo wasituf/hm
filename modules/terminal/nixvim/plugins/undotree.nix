@@ -8,11 +8,14 @@
 
       {
         action = "<cmd>UndotreeToggle<CR>";
-        key = "<leader>uu";
+        key = "<leader>u";
         mode = [
           "n"
           "v"
         ];
+        options = {
+          desc = "Undotree";
+        };
       }
     ];
   };

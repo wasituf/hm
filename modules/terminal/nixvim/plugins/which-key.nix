@@ -20,7 +20,10 @@
           {
             __unkeyed-1 = "<leader>b";
             group = "buffers";
-            icon = "󰈔 ";
+            icon = {
+              icon = " ";
+              color = "orange";
+            };
             expand = {
               __raw = ''
                 function()
@@ -32,17 +35,35 @@
           {
             __unkeyed-1 = "<leader>f";
             group = "file/find";
-            icon = " ";
+            icon = "󰈔 ";
+          }
+          {
+            __unkeyed-1 = "<leader>g";
+            group = "git";
+            icon = "󰘬 ";
           }
           {
             __unkeyed-1 = "<leader>l";
             group = "lsp";
-            icon = "󰁨 ";
+            icon = {
+              icon = " ";
+              color = "yellow";
+            };
+          }
+          {
+            __unkeyed-1 = "<leader>n";
+            group = "notifications";
+            icon = " ";
           }
           {
             __unkeyed-1 = "<leader>s";
             group = "search";
             icon = " ";
+          }
+          {
+            __unkeyed-1 = "<leader>t";
+            group = "toggle";
+            icon = " ";
           }
           {
             __unkeyed-1 = "<leader>w";

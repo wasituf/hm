@@ -11,6 +11,7 @@
     ./nvim-ufo.nix
     ./snacks.nix
     ./treesitter.nix
+    ./trouble.nix
     ./undotree.nix
     ./wakatime.nix
     ./which-key.nix
