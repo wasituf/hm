@@ -8,6 +8,7 @@
     ./mini.nix
     ./neo-tree.nix
     ./nvim-ufo.nix
+    ./snacks.nix
     ./treesitter.nix
     ./undotree.nix
     ./wakatime.nix

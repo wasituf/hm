@@ -107,7 +107,7 @@
           "v"
         ];
         options = {
-          desc = "Copy to clipboard";
+          desc = "Copy to Clipboard";
         };
       }
       {
@@ -118,7 +118,7 @@
           "v"
         ];
         options = {
-          desc = "Copy line to clipboard";
+          desc = "Copy Line to Clipboard";
         };
       }
       {
@@ -129,7 +129,7 @@
           "v"
         ];
         options = {
-          desc = "Delete to void";
+          desc = "Delete to Void";
         };
       }
       {
@@ -139,7 +139,7 @@
           "n"
         ];
         options = {
-          desc = "Delete line to void";
+          desc = "Delete Line to Void";
         };
       }
 
@@ -149,7 +149,7 @@
         key = "<leader>s";
         mode = [ "n" ];
         options = {
-          desc = "Replace all instances of word";
+          desc = "Replace All Instances of Word";
         };
       }
       {
@@ -157,7 +157,7 @@
         key = "<leader>ch";
         mode = [ "n" ];
         options = {
-          desc = "Chmod current file";
+          desc = "Chmod Current File";
         };
       }
       {
@@ -170,17 +170,6 @@
       }
 
       # Buffers
-      {
-        action = "<cmd>bd!<CR>";
-        key = "<leader>bd";
-        mode = [
-          "n"
-          "v"
-        ];
-        options = {
-          desc = "Close current buffer (forced)";
-        };
-      }
       {
         action = "<cmd>bprevious<CR>";
         key = "<C-m>";
