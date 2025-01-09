@@ -69,12 +69,12 @@
       }
 
       {
-        action = "<C-d>zz";
+        action = "<C-d>";
         key = "<C-n>";
         mode = [ "n" ];
       }
       {
-        action = "<C-u>zz";
+        action = "<C-u>";
         key = "<C-e>";
         mode = [ "n" ];
       }

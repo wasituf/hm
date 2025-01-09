@@ -8,7 +8,7 @@
 
       {
         action = "<cmd>UndotreeToggle<CR>";
-        key = "<leader>u";
+        key = "<leader>uu";
         mode = [
           "n"
           "v"
