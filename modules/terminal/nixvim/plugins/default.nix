@@ -2,6 +2,7 @@
 {
   imports = [
     ./cmp.nix
+    ./fzf-lua.nix
     ./hmts.nix
     ./lsp.nix
     ./lz-n.nix
