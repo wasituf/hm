@@ -53,7 +53,7 @@
         bashls.enable = true;
         cssls.enable = true;
         # css_variables.enable = true;
-        denols.enable = true;
+        # denols.enable = true;
         docker_compose_language_service.enable = true;
         dockerls.enable = true;
         emmet_ls.enable = true;

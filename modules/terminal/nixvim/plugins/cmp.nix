@@ -19,6 +19,7 @@
         };
         snippet.expand = ''
           function(args)
+            local luasnip = require("luasnip")
             luasnip.lsp_expand(args.body)
           end
         '';
