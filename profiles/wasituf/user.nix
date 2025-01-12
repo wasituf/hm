@@ -19,6 +19,10 @@
     packages.enable = true;
 
     # desktop
+    # emacs = {
+    #   enable = true;
+    #   enableDaemon = true;
+    # };
 
     # terminal
     eza.enable = true;
