@@ -13,7 +13,6 @@
     ./treesitter.nix
     ./trouble.nix
     ./undotree.nix
-    ./wakatime.nix
     ./which-key.nix
   ];
 }
