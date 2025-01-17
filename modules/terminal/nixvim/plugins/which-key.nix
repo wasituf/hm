@@ -35,40 +35,50 @@
           {
             __unkeyed-1 = "<leader>f";
             group = "file/find";
-            icon = "󰈔 ";
+            icon = {
+              icon = "󰈔 ";
+              color = "blue";
+            };
           }
           {
             __unkeyed-1 = "<leader>g";
             group = "git";
-            icon = "󰘬 ";
-          }
-          {
-            __unkeyed-1 = "<leader>l";
-            group = "lsp";
             icon = {
-              icon = " ";
-              color = "yellow";
+              icon = "󰘬 ";
+              color = "purple";
             };
           }
           {
             __unkeyed-1 = "<leader>n";
             group = "notifications";
-            icon = " ";
+            icon = {
+              icon = " ";
+              color = "pink";
+            };
           }
           {
             __unkeyed-1 = "<leader>s";
             group = "search";
-            icon = " ";
+            icon = {
+              icon = " ";
+              color = "green";
+            };
           }
           {
             __unkeyed-1 = "<leader>t";
             group = "toggle";
-            icon = " ";
+            icon = {
+              icon = " ";
+              color = "yellow";
+            };
           }
           {
             __unkeyed-1 = "<leader>w";
             group = "window";
-            icon = " ";
+            icon = {
+              icon = " ";
+              color = "red";
+            };
             proxy = "<C-w>";
             expand = {
               __raw = ''

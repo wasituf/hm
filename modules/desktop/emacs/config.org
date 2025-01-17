@@ -1,0 +1,130 @@
+#+TITLE: Emacs Configuration
+#+PROPERTY: header-args:emacs-lisp :tangle yes
+#+STARTUP: overview
+
+* Table of Contents
+
+
+* Core Settings
+#+begin_src emacs-lisp
+;; Basic settings
+(setq inhibit-startup-screen t
+ make-backup-files nil
+ auto-save-default nil
+ visible-bell t)
+#+end_src
+
+** UI Tweaks
+Streamline the Emacs interface for a cleaner look.
+
+#+begin_src emacs-lisp
+;; Set a more minimal startup screen
+(setq inhibit-startup-screen t
+ inhibit-startup-message t
+ initial-scratch-message "")
+
+;; Set a cleaner title bar
+(setq frame-title-format "Emacs")
+#+end_src
+
+
+* Themes
+All theme packages supported by my nix emacs module. [ kanagawa, catppuccin, rose-pine ]
+Also enables autothemer for rose-pine-theme.
+
+#+begin_src emacs-lisp
+(use-package autothemer)
+
+(use-package catppuccin-theme)
+(use-package kanagawa-themes)
+;;(use-package rose-pine-theme)
+#+end_src
+
+
+* Evil mode
+Use evil-mode for vim bindings
+
+#+begin_src emacs-lisp
+(use-package evil
+  :config
+  (evil-mode 1))
+#+end_src
+
+
+* LSP
+Language servers support and formatting with format-all.
+
+** Lsp Mode
+#+begin_src emacs-lisp
+(use-package lsp-mode
+ :commands lsp
+ :hook ((python-mode . lsp)
+   (javascript-mode . lsp)))
+#+end_src
+
+
+** Formatting
+#+begin_src emacs-lisp
+(use-package format-all
+ :hook (prog-mode . format-all-mode))
+#+end_src
+
+
+* Org
+Org support for emacs.
+
+#+begin_src emacs-lisp
+;; Enable org-mode 
+(use-package org)
+
+;; Modern org
+(use-package org-modern)
+
+;; <s and <q (aka org-tempo) support
+(use-package yasnippet-snippets)
+(use-package yasnippet
+  :config (yas-global-mode 1))
+#+end_src
+
+
+* Miscellaneous Packages
+
+** Magit
+Git porcelain for emacs.
+
+#+begin_src emacs-lisp
+(use-package magit
+ :config
+ (global-set-key (kbd "C-x g") 'magit-status))
+#+end_src
+
+** Doom Modeline
+Nice statusline for emacs. Meant to be together.
+
+#+begin_src emacs-lisp
+(use-package all-the-icons
+  :config)
+
+(use-package doom-modeline
+  :init
+  (doom-modeline-mode 1)
+  :config
+  ;; Refresh mode line when creating new frames
+  (add-hook 'after-make-frame-functions
+    (lambda (_frame)
+      (doom-modeline-refresh-bars))))
+#+end_src
+
+** Which Key
+#+begin_src emacs-lisp
+(use-package which-key)
+#+end_src
+
+
+* Keymaps
+
+- Use general for easier syntax (e.g. for evil keymaps)
+#+begin_src emacs-lisp
+(use-package general)
+#+end_src
+

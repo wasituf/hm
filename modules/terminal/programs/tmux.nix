@@ -13,6 +13,7 @@ in
     enable = mkEnableOption "tmux";
     theme = mkOption {
       type = types.enum [
+        "kanagawa"
         "rose-pine"
         "catppuccin"
       ];

@@ -10,43 +10,7 @@
       keymaps = {
         lspBuf = {
           L = "hover";
-          gD = "references";
-          gd = "definition";
-          gi = "implementation";
-          gt = "type_definition";
         };
-        extra = [
-          {
-            action = "<cmd>LspStop<CR>";
-            key = "<leader>lx";
-            mode = [ "n" ];
-            options = {
-              desc = "Stop Lsp Server";
-            };
-          }
-          {
-            action = "<cmd>LspStart<CR>";
-            key = "<leader>ls";
-            mode = [ "n" ];
-            options = {
-              desc = "Start Lsp Server";
-            };
-          }
-          {
-            action = "<cmd>LspRestart<CR>";
-            key = "<leader>lr";
-            mode = [ "n" ];
-            options = {
-              desc = "Restart Lsp Server";
-            };
-          }
-          # {
-          #   action = {
-          #     __raw = ''require("fzf-lua").lsp_definitions'';
-          #   };
-          #   key = "<leader>sd";
-          # }
-        ];
       };
       servers = {
         astro.enable = true;

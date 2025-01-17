@@ -12,6 +12,16 @@ in
   options.modules.emacs = {
     enable = mkEnableOption "emacs";
     enableDaemon = mkEnableOption "Enable the emacs daemon.";
+    colorscheme = mkOption {
+      type = types.enum [
+        "kanagawa-wave"
+        "catppuccin"
+        "rose-pine"
+      ];
+      default = "kanagawa-wave";
+      description = "Theme for emacs";
+      example = "catppuccin";
+    };
   };
 
   config = mkIf cfg.enable {
@@ -24,9 +34,38 @@ in
     programs.emacs = {
       enable = true;
       package = pkgs.emacs-gtk;
-      extraPackages = epkgs: [
-        epkgs.doom
-      ];
+      extraPackages = (
+        epkgs: with epkgs; [
+          # Core
+          use-package
+
+          # Main packages
+          evil
+          format-all
+          lsp-mode
+          magit
+          org
+
+          # Util packages
+          all-the-icons
+          autothemer
+          doom-modeline
+          drag-stuff
+          general
+          literate-elisp
+          org-modern
+          scroll-on-jump
+          toc-org
+          vertico
+          which-key
+          yasnippet
+          yasnippet-snippets
+
+          # Theme packages
+          catppuccin-theme
+          kanagawa-themes
+        ]
+      );
     };
 
     home.packages = with pkgs; [
@@ -34,6 +73,14 @@ in
       ripgrep
       git
     ];
-  };
 
+    home.file = {
+      ".config/emacs/config.org".source = ./config.org;
+      ".config/emacs/themes/rose-pine-theme.el".source = ./rose-pine-theme.el;
+      ".config/emacs/keymaps.el".source = ./keymaps.el;
+      ".config/emacs/init.el".text = ''
+        (load "~/.config/emacs/themes/rose-pine-theme.el")
+      '';
+    };
+  };
 }

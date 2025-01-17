@@ -41,38 +41,33 @@
             };
           };
           files = {
-            prompt = " ";
+            prompt = "Files  ";
             cwd_prompt = false;
           };
           git = {
-            files = {
-              prompt = "Git Files: ";
-            };
-            status = {
-              prompt = "Git Status: ";
-            };
-            commits = {
-              prompt = "Git Commits: ";
-            };
+            files.prompt = "Git Files  ";
+            status.prompt = "Git Status  ";
+            commits.prompt = "Commits  ";
+            branches.prompt = "Branches  ";
           };
           grep = {
-            prompt = "Live Grep: ";
-            input_prompt = "Grep: ";
+            prompt = "Live Grep  ";
+            input_prompt = "Grep  ";
           };
           buffers = {
-            prompt = " ";
+            prompt = "Buffers  ";
           };
           keymaps = {
-            prompt = "Keymaps: ";
+            prompt = "Keymaps  ";
           };
           quickfix_stack = {
-            prompt = "Quickfix: ";
+            prompt = "Quickfix  ";
           };
           lsp = {
-            prompt_postfix = ": ";
-            code_actions.prompt = "Code Actions: ";
-            finder.prompt = "Finder: ";
-            diagnostics.prompt = "Diagnostics: ";
+            prompt_postfix = "  ";
+            code_actions.prompt = "Code Actions  ";
+            finder.prompt = "Finder  ";
+            diagnostics.prompt = "Diagnostics  ";
           };
           previewers = {
             builtin = {
@@ -134,6 +129,12 @@
           };
 
           # Git
+          "<leader>gb" = {
+            action = "git_branches";
+            options = {
+              desc = "Branches";
+            };
+          };
           "<leader>gc" = {
             action = "git_commits";
             options = {
@@ -147,6 +148,45 @@
             };
           };
 
+          # LSP
+          "gd" = {
+            action = "lsp_definitions";
+            options = {
+              desc = "Find Definitions";
+            };
+          };
+          "gD" = {
+            action = "lsp_references";
+            options = {
+              desc = "Find References";
+            };
+          };
+          "gf" = {
+            action = "lsp_finder";
+            options = {
+              desc = "LSP Finder";
+            };
+          };
+          "gc" = {
+            action = "lsp_code_actions";
+            options = {
+              desc = "Code Actions";
+            };
+          };
+          "gi" = {
+            action = "lsp_implementations";
+            options = {
+              desc = "Find Implementations";
+            };
+          };
+          "gt" = {
+            action = "lsp_typedefs";
+            options = {
+              desc = "Find Type Definitions";
+            };
+          };
+
+          # Search
           "<leader>sg" = {
             action = "live_grep";
             options = {
@@ -159,18 +199,6 @@
               desc = "Command History";
             };
           };
-          "<leader>sd" = {
-            action = "diagnostics_document";
-            options = {
-              desc = "Document Diagnostics";
-            };
-          };
-          "<leader>sD" = {
-            action = "diagnostics_workspace";
-            options = {
-              desc = "Workspace Diagnostics";
-            };
-          };
           "<leader>sk" = {
             action = "keymaps";
             options = {
@@ -181,6 +209,31 @@
             action = "quickfix";
             options = {
               desc = "Quickfix List";
+            };
+          };
+
+          "<leader>sd" = {
+            action = "lsp_document_diagnostics";
+            options = {
+              desc = "Document Diagnostics";
+            };
+          };
+          "<leader>sD" = {
+            action = "lsp_workspace_diagnostics";
+            options = {
+              desc = "Workspace Diagnostics";
+            };
+          };
+          "<leader>ss" = {
+            action = "lsp_document_symbols";
+            options = {
+              desc = "Document Symbols";
+            };
+          };
+          "<leader>sS" = {
+            action = "lsp_workspace_symbols";
+            options = {
+              desc = "Workspace Symbols";
             };
           };
         };

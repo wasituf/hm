@@ -6,6 +6,7 @@
         modules = {
           nixvim.colorscheme = "kanagawa";
           ghostty.theme = "Kanagawa Wave";
+          emacs.colorscheme = "kanagawa-wave";
         };
       };
     };
@@ -14,6 +15,7 @@
         modules = {
           nixvim.colorscheme = "catppuccin";
           ghostty.theme = "catppuccin-mocha";
+          emacs.colorscheme = "catppuccin";
         };
       };
     };
@@ -22,6 +24,7 @@
         modules = {
           nixvim.colorscheme = "rose-pine";
           ghostty.theme = "rose-pine";
+          emacs.colorscheme = "rose-pine";
         };
       };
     };

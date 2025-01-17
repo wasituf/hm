@@ -132,29 +132,11 @@
           desc = "Delete to Void";
         };
       }
-      {
-        action = "V\"_d";
-        key = "<leader>dd";
-        mode = [
-          "n"
-        ];
-        options = {
-          desc = "Delete Line to Void";
-        };
-      }
 
       # Miscellaneous
       {
-        action = ":%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>";
-        key = "<leader>s";
-        mode = [ "n" ];
-        options = {
-          desc = "Replace All Instances of Word";
-        };
-      }
-      {
         action = "<cmd>!chmod +x %<CR>";
-        key = "<leader>ch";
+        key = "<leader>/";
         mode = [ "n" ];
         options = {
           desc = "Chmod Current File";
