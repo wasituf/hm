@@ -19,6 +19,7 @@ in
     home.packages = with pkgs; [
       # desktop
       # (config.lib.nixGL.wrap gitbutler)
+      vivaldi
 
       # misc
       any-nix-shell

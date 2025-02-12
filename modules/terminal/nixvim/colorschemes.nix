@@ -24,6 +24,7 @@
           overrides = ''
             function(colors)
               local theme = colors.theme
+              local palette = colors.palette
               local makeDiagnosticColor = function(color)
                 local c = require("kanagawa.lib.color")
                 return { fg = color, bg = c(color):blend(theme.ui.bg, 0.95):to_hex() }
@@ -50,6 +51,16 @@
                 DiagnosticVirtualTextInfo  = makeDiagnosticColor(theme.diag.info),
                 DiagnosticVirtualTextWarn  = makeDiagnosticColor(theme.diag.warning),
                 DiagnosticVirtualTextError = makeDiagnosticColor(theme.diag.error),
+
+                -- Markview
+                MarkviewHeading1 = makeDiagnosticColor(palette.waveRed),
+                MarkviewHeading2 = makeDiagnosticColor(palette.surimiOrange),
+                MarkviewHeading3 = makeDiagnosticColor(palette.carpYellow),
+                MarkviewHeading4 = makeDiagnosticColor(palette.springGreen),
+                MarkviewHeading5 = makeDiagnosticColor(palette.crystalBlue),
+                MarkviewHeading6 = makeDiagnosticColor(palette.oniViolet),
+
+                MarkviewCheckboxUnchecked = { fg = palette.waveRed }
               }
             end
           '';

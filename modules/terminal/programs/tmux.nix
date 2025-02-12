@@ -147,15 +147,15 @@ in
             TMUX_FZF_LAUNCH_KEY="f"
           '';
         }
-        {
-          plugin = resurrect;
-        }
+        # {
+        #   plugin = resurrect;
+        # }
         {
           plugin = continuum;
           extraConfig = ''
             set -g @continuum-save-interval "10"
             set -g @continuum-boot "on"
-            set -g @continuum-restore "on"
+            # set -g @continuum-restore "on"
           '';
         }
       ];

@@ -16,6 +16,10 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -24,6 +28,7 @@
       home-manager,
       nixgl,
       nixvim,
+      spicetify-nix,
       ...
     }:
     let
@@ -43,11 +48,13 @@
           ./modules
           ./specialisations.nix
           nixvim.homeManagerModules.nixvim
+          spicetify-nix.homeManagerModules.default
         ];
 
         extraSpecialArgs = {
           inherit user;
           inherit nixgl;
+          inherit spicetify-nix;
         };
       };
     };

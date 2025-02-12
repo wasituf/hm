@@ -10,7 +10,13 @@
   home.packages = with pkgs; [
     nil
     nixd
-    nixfmt-rfc-style
+    # nixfmt-rfc-style
+    # prettierd
+    # gofumpt
+    # gotools
+    # golines
+    # shfmt
+    # stylua
   ];
 
   # Modules
@@ -23,6 +29,11 @@
       enable = true;
       enableDaemon = true;
     };
+    email = {
+      enable = true;
+      enableThunderbird = true;
+    };
+    spicetify.enable = true;
 
     # terminal
     eza.enable = true;

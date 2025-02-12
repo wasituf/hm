@@ -71,12 +71,12 @@
       {
         action = "<C-d>";
         key = "<C-n>";
-        mode = [ "n" ];
+        mode = [ "n" "x" ];
       }
       {
         action = "<C-u>";
         key = "<C-e>";
-        mode = [ "n" ];
+        mode = [ "n" "x" ];
       }
 
       {

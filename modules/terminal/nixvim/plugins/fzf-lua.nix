@@ -64,6 +64,7 @@
             prompt = "Quickfix  ";
           };
           lsp = {
+            async_or_timeout = 3000; # none-ls throws error without this
             prompt_postfix = "  ";
             code_actions.prompt = "Code Actions  ";
             finder.prompt = "Finder  ";

@@ -77,9 +77,16 @@ in
     home.file = {
       ".config/emacs/config.org".source = ./config.org;
       ".config/emacs/themes/rose-pine-theme.el".source = ./rose-pine-theme.el;
-      ".config/emacs/keymaps.el".source = ./keymaps.el;
       ".config/emacs/init.el".text = ''
-        (load "~/.config/emacs/themes/rose-pine-theme.el")
+        ; (load "~/.config/emacs/themes/rose-pine-theme.el")
+        (load-theme '${cfg.colorscheme} t)
+
+        ;; Enable org-mode 
+        (use-package org)
+        (require 'org)
+
+        (use-package literate-elisp)
+        (literate-elisp-load "~/.config/emacs/config.org")
       '';
     };
   };

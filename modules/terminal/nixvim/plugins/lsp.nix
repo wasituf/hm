@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, pkgs, ... }:
 {
   programs.nixvim.plugins = {
     lsp = {
@@ -61,9 +61,84 @@
       };
     };
 
-    lsp-format = {
+    conform-nvim = {
       enable = true;
-      lspServersToEnable = "all";
+      settings = {
+        log_level = "warn";
+        notify_on_error = true;
+        format_on_save = {
+          lsp_fallback = true;
+          timeout_ms = 2000;
+        };
+        formatters_by_ft = {
+          bash = [ "shfmt" ];
+          shell = [ "shfmt" ];
+          sh = [ "shfmt" ];
+          javascript = [ "prettierd" ];
+          typescript = [ "prettierd" ];
+          javascriptreact = [ "prettierd" ];
+          typescriptreact = [ "prettierd" ];
+          vue = [ "prettierd" ];
+          markdown = [ "prettierd" ];
+          css = [ "prettierd" ];
+          json = [ "prettierd" ];
+          jsonc = [ "prettierd" ];
+          scss = [ "prettierd" ];
+          less = [ "prettierd" ];
+          yaml = [ "prettierd" ];
+          graphql = [ "prettierd" ];
+          html = [ "prettierd" ];
+          astro = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            timeout_ms = 2000;
+            stop_after_first = true;
+          }; # NOTE Maybe prettied can't do astro (or any plugins)
+          lua = [ "stylua" ];
+          go = [ "gofumpt" "goimports" "golines" ];
+          nix = [ "nixfmt" ];
+
+          "_" = [
+            "squeeze_blanks"
+            "trim_whitespace"
+            "trim_newlines"
+          ];
+        };
+        formatters = {
+          shfmt = {
+            command = lib.getExe pkgs.shfmt;
+          };
+          prettierd = {
+            command = lib.getExe pkgs.prettierd;
+          };
+          prettier = {
+            command = lib.getExe pkgs.nodePackages_latest.prettier;
+          };
+          stylua = {
+            command = lib.getExe pkgs.stylua;
+          };
+          gofumpt = {
+            command = lib.getExe pkgs.gofumpt;
+          };
+          goimports = {
+            command = lib.getExe' pkgs.gotools "goimports";
+          };
+          golines = {
+            command = lib.getExe' pkgs.golines "golines";
+          };
+          nixfmt = {
+            command = lib.getExe pkgs.nixfmt-rfc-style;
+          };
+          squeeze_blanks = {
+            command = lib.getExe' pkgs.coreutils "cat";
+          };
+        };
+      };
+    };
+
+    lsp-format = {
+      enable = false;
+      # lspServersToEnable = "all";
     };
 
     lsp-lines = {
