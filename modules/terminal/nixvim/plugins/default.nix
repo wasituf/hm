@@ -1,10 +1,12 @@
 { ... }:
 {
   imports = [
+    ./auto-session.nix
     ./cmp.nix
     ./fzf-lua.nix
     ./hmts.nix
     ./lsp.nix
+    ./lualine.nix
     ./lz-n.nix
     ./markview.nix
     ./mini.nix

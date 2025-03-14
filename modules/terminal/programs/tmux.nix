@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  minimal-tmux,
   ...
 }:
 with lib;
@@ -24,6 +25,13 @@ in
   };
 
   config = mkIf cfg.enable {
+    # Tmuxp workspace files
+    home.file = {
+      ".config/tmuxp/dev.yaml".source = ./tmuxp/dev.yaml;
+      ".config/tmuxp/notes.yaml".source = ./tmuxp/notes.yaml;
+      ".config/tmuxp/go-boot-dev.yaml".source = ./tmuxp/go-boot-dev.yaml;
+    };
+
     # Static
     programs.tmux = {
       enable = true;
@@ -120,6 +128,48 @@ in
             set -g @rose_pine_date_time_icon ''
             set -g @rose_pine_window_status_separator "  "
             set -g @rose_pine_status_left_append_section ' '
+          '';
+        })
+        (mkIf (cfg.theme == "kanagawa") {
+          plugin = minimal-tmux.packages.${pkgs.system}.default;
+          extraConfig = ''
+            set -g @minimal-tmux-fg "#1F1F28"
+            set -g @minimal-tmux-bg "#7E9CD8"
+            # set -g @minimal-tmux-justify "centre"
+            set -g @minimal-tmux-justify "left"
+            set -g @minimal-tmux-indicator-str " "
+            set -g @minimal-tmux-indicator true
+            set -g @minimal-tmux-status "bottom"
+
+            # Enables or disables the left and right status bar
+            set -g @minimal-tmux-right true
+            set -g @minimal-tmux-left true
+
+            # expanded icon (fullscreen icon)
+            set -g @minimal-tmux-expanded-icon "󰊓 "
+
+            # on all tabs (default is false)
+            # false will make it visible for the current tab only
+            set -g @minimal-tmux-show-expanded-icons-for-all-tabs true
+
+            # To add or remove extra text in status bar
+            set -g @minimal-tmux-status-right-extra " "
+            set -g @minimal-tmux-status-left-extra ""
+
+            # To make the selection box rounded () or edged <>
+            # Default is nothing, when set to true default is edged
+            set -g @minimal-tmux-use-arrow false
+            set -g @minimal-tmux-right-arrow ""
+            set -g @minimal-tmux-left-arrow ""
+
+            # Not recommended to change these values
+            set -g @minimal-tmux-status-right "#S"
+            # set -g @minimal-tmux-status-left "refer to code"
+
+            # If getting strings cut in left status or right
+            # Here 20 is the length of the characters in the string
+            set -g status-right-length 20
+            set -g status-left-length 20
           '';
         })
         (mkIf (cfg.theme == "catppuccin") {

@@ -34,6 +34,7 @@
       enableThunderbird = true;
     };
     spicetify.enable = true;
+    zathura.enable = true;
 
     # terminal
     eza.enable = true;
@@ -42,7 +43,7 @@
     nixvim.enable = true;
     tmux = {
       enable = true;
-      theme = "rose-pine";
+      theme = "kanagawa";
     };
     zoxide.enable = true;
 

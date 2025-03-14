@@ -22,7 +22,7 @@
         dockerls.enable = true;
         emmet_ls.enable = true;
         eslint.enable = true;
-        fish_lsp.enable = true;
+        # fish_lsp.enable = true;
         # gdscript.enable = true;
         # gdshader_lsp.enable = true;
         gleam.enable = true;
@@ -41,7 +41,7 @@
         };
         # guile_ls.enable = true;
         html.enable = true;
-        htmx.enable = true;
+        # htmx.enable = true;
         jsonls.enable = true;
         lua_ls.enable = true;
         marksman.enable = true;
@@ -51,9 +51,19 @@
         nushell.enable = true;
         # prismals.enable = true;
         pylyzer.enable = true;
+        racket_langserver = {
+          enable = true;
+          package = null;
+          cmd = [ "racket -l racket-langserver" ];
+        };
+        rust_analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+        };
         sqls.enable = true;
         svelte.enable = true;
-        tailwindcss.enable = true;
+        # tailwindcss.enable = true;
         templ.enable = true;
         ts_ls.enable = true;
         # unocss = true;
@@ -74,6 +84,7 @@
           bash = [ "shfmt" ];
           shell = [ "shfmt" ];
           sh = [ "shfmt" ];
+          rust = [ "rustfmt" ];
           javascript = [ "prettierd" ];
           typescript = [ "prettierd" ];
           javascriptreact = [ "prettierd" ];
@@ -95,7 +106,11 @@
             stop_after_first = true;
           }; # NOTE Maybe prettied can't do astro (or any plugins)
           lua = [ "stylua" ];
-          go = [ "gofumpt" "goimports" "golines" ];
+          go = [
+            "gofumpt"
+            "goimports"
+            "golines"
+          ];
           nix = [ "nixfmt" ];
 
           "_" = [
@@ -107,6 +122,9 @@
         formatters = {
           shfmt = {
             command = lib.getExe pkgs.shfmt;
+          };
+          rustfmt = {
+            command = lib.getExe pkgs.rustfmt;
           };
           prettierd = {
             command = lib.getExe pkgs.prettierd;
@@ -137,8 +155,8 @@
     };
 
     lsp-format = {
-      enable = false;
-      # lspServersToEnable = "all";
+      enable = true;
+      lspServersToEnable = [ "racket_langserver" ];
     };
 
     lsp-lines = {

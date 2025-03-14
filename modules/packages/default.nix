@@ -9,7 +9,10 @@ let
   cfg = config.modules.packages;
 in
 {
-  imports = [ ./theme-switch.nix ];
+  imports = [
+    ./theme-switch.nix
+    ./tmux-sessionizer.nix
+  ];
 
   options.modules.packages = {
     enable = mkEnableOption "packages";
@@ -19,13 +22,17 @@ in
     home.packages = with pkgs; [
       # desktop
       # (config.lib.nixGL.wrap gitbutler)
-      vivaldi
+      gimp
+      (config.lib.nixGL.wrap hoppscotch)
+      inkscape-with-extensions
 
       # misc
       any-nix-shell
+      gum
 
       # scripts
       config.custom-pkgs.theme-switch.package
+      config.custom-pkgs.tmux-sessionizer.package
     ];
   };
 }

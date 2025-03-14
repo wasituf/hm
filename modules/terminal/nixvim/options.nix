@@ -55,6 +55,9 @@
       undofile = true;
 
       textwidth = 100;
+
+      # Misc
+      laststatus = 3;
     };
   };
 }

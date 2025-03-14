@@ -20,6 +20,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    minimal-tmux = {
+      url = "github:niksingh710/minimal-tmux-status";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -29,6 +33,7 @@
       nixgl,
       nixvim,
       spicetify-nix,
+      minimal-tmux,
       ...
     }:
     let
@@ -55,6 +60,7 @@
           inherit user;
           inherit nixgl;
           inherit spicetify-nix;
+          inherit minimal-tmux;
         };
       };
     };

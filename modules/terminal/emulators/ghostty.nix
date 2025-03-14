@@ -29,7 +29,11 @@ in
     ];
     home.file.".config/ghostty/config".text = ''
       font-family=JetBrainsMono NF
-      font-size=11
+      font-size=12
+      font-style=Medium
+      font-style-bold=Bold
+      font-style-italic=Medium Italic
+      font-style-bold-italic=Bold Italic
       window-decoration=false
       window-padding-x=0
       window-padding-y=0
