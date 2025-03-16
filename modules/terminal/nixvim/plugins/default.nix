@@ -17,6 +17,7 @@
     ./treesitter.nix
     ./trouble.nix
     ./undotree.nix
+    ./vim-be-good.nix
     ./which-key.nix
   ];
 }
