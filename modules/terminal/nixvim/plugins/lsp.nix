@@ -15,18 +15,19 @@
       servers = {
         astro.enable = true;
         bashls.enable = true;
-        cssls.enable = true;
+        biome.enable = true;
+        # cssls.enable = true;
         # css_variables.enable = true;
         # denols.enable = true;
         docker_compose_language_service.enable = true;
         dockerls.enable = true;
         emmet_ls.enable = true;
-        eslint.enable = true;
+        # eslint.enable = true;
         # fish_lsp.enable = true;
         # gdscript.enable = true;
         # gdshader_lsp.enable = true;
         gleam.enable = true;
-        glsl_analyzer.enable = true;
+        # glsl_analyzer.enable = true;
         gopls = {
           enable = true;
           settings = {
@@ -67,7 +68,7 @@
         templ.enable = true;
         ts_ls.enable = true;
         # unocss = true;
-        vala_ls.enable = true;
+        # vala_ls.enable = true;
       };
     };
 
@@ -85,26 +86,66 @@
           shell = [ "shfmt" ];
           sh = [ "shfmt" ];
           rust = [ "rustfmt" ];
-          javascript = [ "prettierd" ];
-          typescript = [ "prettierd" ];
-          javascriptreact = [ "prettierd" ];
-          typescriptreact = [ "prettierd" ];
-          vue = [ "prettierd" ];
-          markdown = [ "prettierd" ];
-          css = [ "prettierd" ];
-          json = [ "prettierd" ];
-          jsonc = [ "prettierd" ];
-          scss = [ "prettierd" ];
-          less = [ "prettierd" ];
-          yaml = [ "prettierd" ];
-          graphql = [ "prettierd" ];
-          html = [ "prettierd" ];
-          astro = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            timeout_ms = 2000;
-            stop_after_first = true;
-          }; # NOTE Maybe prettied can't do astro (or any plugins)
+          javascript = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          typescript = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          javascriptreact = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          typescriptreact = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          vue = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          markdown = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          css = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          json = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          jsonc = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          scss = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          less = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          yaml = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          graphql = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          html = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
+          astro = [
+            "biome-check"
+            "biome-organize-imports"
+          ];
           lua = [ "stylua" ];
           go = [
             "gofumpt"
@@ -112,6 +153,7 @@
             "golines"
           ];
           nix = [ "nixfmt" ];
+          python = [ "black" ];
 
           "_" = [
             "squeeze_blanks"
@@ -126,12 +168,21 @@
           rustfmt = {
             command = lib.getExe pkgs.rustfmt;
           };
-          prettierd = {
-            command = lib.getExe pkgs.prettierd;
+          biome-check = {
+            command = lib.getExe pkgs.biome;
           };
-          prettier = {
-            command = lib.getExe pkgs.nodePackages_latest.prettier;
+          biome-organize-imports = {
+            command = lib.getExe pkgs.biome;
           };
+          black = {
+            command = lib.getExe pkgs.black;
+          };
+          # prettierd = {
+          #   command = lib.getExe pkgs.prettierd;
+          # };
+          # prettier = {
+          #   command = lib.getExe pkgs.nodePackages_latest.prettier;
+          # };
           stylua = {
             command = lib.getExe pkgs.stylua;
           };
