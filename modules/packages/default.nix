@@ -10,6 +10,7 @@ let
 in
 {
   imports = [
+    ./flake-init.nix
     ./theme-switch.nix
     ./tmux-sessionizer.nix
   ];
@@ -31,6 +32,7 @@ in
       gum
 
       # scripts
+      config.custom-pkgs.flake-init.package
       config.custom-pkgs.theme-switch.package
       config.custom-pkgs.tmux-sessionizer.package
     ];

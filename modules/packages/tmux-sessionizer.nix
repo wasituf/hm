@@ -29,7 +29,7 @@ with lib;
           cd $selected && tmuxp load dev -s $session_name
         '';
       };
-      description = "Script to switch between specialisations";
+      description = "Script to bootstrap tmuxp sessions for projects";
     };
   };
 }

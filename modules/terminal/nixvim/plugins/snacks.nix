@@ -17,6 +17,9 @@
           input = {
             enabled = true;
           };
+          image = {
+            enabled = true;
+          };
           notifier = {
             enabled = true;
           };
