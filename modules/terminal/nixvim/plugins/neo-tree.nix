@@ -54,23 +54,6 @@
         action = {
           __raw = ''
             function()
-              require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
-            end
-          '';
-        };
-        key = "<leader>e";
-        mode = [
-          "n"
-          "x"
-        ];
-        options = {
-          desc = "NeoTree";
-        };
-      }
-      {
-        action = {
-          __raw = ''
-            function()
               require("neo-tree.command").execute({ source = "buffers", toggle = true })
             end
           '';

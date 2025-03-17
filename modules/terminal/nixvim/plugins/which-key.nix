@@ -33,6 +33,14 @@
             };
           }
           {
+            __unkeyed-1 = "<leader>e";
+            group = "eval";
+            icon = {
+              icon = "󰨯 ";
+              color = "red";
+            };
+          }
+          {
             __unkeyed-1 = "<leader>f";
             group = "file/find";
             icon = {

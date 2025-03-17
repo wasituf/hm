@@ -3,6 +3,7 @@
   imports = [
     ./auto-session.nix
     ./cmp.nix
+    ./conjure.nix
     ./fzf-lua.nix
     ./hmts.nix
     ./lsp.nix
