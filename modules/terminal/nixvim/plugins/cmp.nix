@@ -29,16 +29,20 @@
           { name = "luasnip"; }
           { name = "async_path"; }
           { name = "emoji"; }
+          { name = "nerdfont"; }
           { name = "latex_symbols"; }
           { name = "buffer"; }
         ];
         window = {
           completion = {
-            border = "rounded";
-            winhighlight = "";
+            __raw = ''
+              cmp.config.window.bordered()
+            '';
           };
           documentation = {
-            border = "rounded";
+            __raw = ''
+              cmp.config.window.bordered()
+            '';
           };
         };
       };
