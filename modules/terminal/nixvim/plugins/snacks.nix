@@ -4,6 +4,7 @@
     plugins = {
       snacks = {
         enable = true;
+        lazyLoad.settings.events = "UIEnter";
         settings = {
           bufdelete = {
             enabled = true;
