@@ -64,7 +64,7 @@
         };
         sqls.enable = true;
         svelte.enable = true;
-        # tailwindcss.enable = true;
+        tailwindcss.enable = true;
         templ.enable = true;
         ts_ls.enable = true;
         # unocss = true;
