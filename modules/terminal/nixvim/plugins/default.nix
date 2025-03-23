@@ -17,6 +17,7 @@
     # ./render-markdown.nix
     ./smart-splits.nix
     ./snacks.nix
+    ./todo-comments.nix
     ./treesitter.nix
     ./undotree.nix
     ./vim-be-good.nix

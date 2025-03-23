@@ -24,7 +24,7 @@
           notifier = {
             enabled = true;
           };
-          # TODO replace fzf-lua with picker when snacks package is updated in nixpkgs
+          # TODO: replace fzf-lua with picker when snacks package is updated in nixpkgs
           # picker = {
           #   enabled = true;
           # };
