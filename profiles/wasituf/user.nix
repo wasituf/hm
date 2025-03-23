@@ -29,10 +29,6 @@
       enable = true;
       enableDaemon = true;
     };
-    email = {
-      enable = true;
-      enableThunderbird = true;
-    };
     spicetify.enable = true;
     zathura.enable = true;
 

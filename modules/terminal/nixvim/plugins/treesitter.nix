@@ -18,7 +18,12 @@
     };
     ts-context-commentstring = {
       enable = true;
-      disableAutoInitialization = true;
+      extraOptions = {
+        enable_autocmd = false;
+      };
+    };
+    ts-comments = {
+      enable = true;
     };
   };
 }
