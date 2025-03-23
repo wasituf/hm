@@ -9,6 +9,16 @@
         indent.enable = true;
       };
     };
+    ts-autotag = {
+      enable = true;
+      settings = {
+        opts = {
+          enable_rename = true;
+          enable_close = true;
+          enable_close_on_slash = true;
+        };
+      };
+    };
     treesitter-context = {
       enable = true;
       settings = {
