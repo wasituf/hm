@@ -5,6 +5,10 @@
       enable = true;
       autoEnableSources = true;
       settings = {
+        performance = {
+          debounce = 0;
+          throttle = 0;
+        };
         completeion = {
           completeopt = "menu,menuone,preview,noselect";
         };
