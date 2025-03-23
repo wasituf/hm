@@ -210,10 +210,6 @@
       lspServersToEnable = [ "racket_langserver" ];
     };
 
-    lsp-signature = {
-      enable = true;
-    };
-
     # lsp-lines = {
     #   enable = true;
     # };
