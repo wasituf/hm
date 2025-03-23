@@ -14,6 +14,7 @@
     ./neo-tree.nix
     ./nvim-ufo.nix
     ./rainbow-delimiters.nix
+    # ./render-markdown.nix
     ./smart-splits.nix
     ./snacks.nix
     ./treesitter.nix
