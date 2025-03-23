@@ -13,6 +13,7 @@
     ./mini.nix
     ./neo-tree.nix
     ./nvim-ufo.nix
+    ./rainbow-delimiters.nix
     ./smart-splits.nix
     ./snacks.nix
     ./treesitter.nix
