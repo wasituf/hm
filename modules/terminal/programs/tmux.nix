@@ -30,6 +30,7 @@ in
       ".config/tmuxp/dev.yaml".source = ./tmuxp/dev.yaml;
       ".config/tmuxp/notes.yaml".source = ./tmuxp/notes.yaml;
       ".config/tmuxp/go-boot-dev.yaml".source = ./tmuxp/go-boot-dev.yaml;
+      ".config/tmuxp/hm.yaml".source = ./tmuxp/hm.yaml;
     };
 
     # Static
