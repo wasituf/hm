@@ -18,6 +18,7 @@
     # ./render-markdown.nix
     ./smart-splits.nix
     ./snacks.nix
+    ./tailwind-tools.nix
     ./todo-comments.nix
     ./treesitter.nix
     ./undotree.nix

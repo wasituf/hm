@@ -145,6 +145,7 @@
           astro = [
             "biome-check"
             "biome-organize-imports"
+            "tailwind_sort"
           ];
           lua = [ "stylua" ];
           go = [
@@ -200,6 +201,11 @@
           };
           squeeze_blanks = {
             command = lib.getExe' pkgs.coreutils "cat";
+          };
+          tailwind_sort = {
+            command = {
+              __raw = ''function() return vim.cmd("TailwindSort") end'';
+            };
           };
         };
       };
