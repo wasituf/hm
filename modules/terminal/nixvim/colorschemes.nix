@@ -60,7 +60,9 @@
                 MarkviewHeading5 = makeDiagnosticColor(palette.crystalBlue),
                 MarkviewHeading6 = makeDiagnosticColor(palette.oniViolet),
 
-                MarkviewCheckboxUnchecked = { fg = palette.waveRed }
+                MarkviewCheckboxUnchecked = { fg = palette.waveRed },
+
+                GitSignsCurrentLineBlame = { fg = "#505068" }
               }
             end
           '';

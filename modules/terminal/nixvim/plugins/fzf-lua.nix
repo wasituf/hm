@@ -142,7 +142,7 @@
               desc = "Commits";
             };
           };
-          "<leader>gs" = {
+          "<leader>gst" = {
             action = "git_status";
             options = {
               desc = "Status";

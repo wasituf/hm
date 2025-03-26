@@ -5,6 +5,7 @@
     ./cmp.nix
     ./conjure.nix
     ./fzf-lua.nix
+    ./gitsigns.nix
     ./hmts.nix
     ./lsp.nix
     ./lualine.nix
