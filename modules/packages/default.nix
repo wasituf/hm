@@ -23,7 +23,7 @@ in
     home.packages = with pkgs; [
       # desktop
       # (config.lib.nixGL.wrap gitbutler)
-      gimp
+      # gimp
       (config.lib.nixGL.wrap hoppscotch)
       inkscape-with-extensions
 
