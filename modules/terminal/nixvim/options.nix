@@ -10,7 +10,7 @@
       # Displays which-key popup sooner
       timeoutlen = 300;
 
-      background = "";
+      background = "dark";
 
       # Line numbers
       relativenumber = true;
