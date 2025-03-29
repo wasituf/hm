@@ -108,8 +108,7 @@
             "biome-organize-imports"
           ];
           markdown = [
-            "biome-check"
-            "biome-organize-imports"
+            "mdformat"
           ];
           latex = [
             "tex-fmt"
@@ -188,6 +187,9 @@
           # prettier = {
           #   command = lib.getExe pkgs.nodePackages_latest.prettier;
           # };
+          mdformat = {
+            command = lib.getExe pkgs.mdformat;
+          };
           tex-fmt = {
             command = lib.getExe pkgs.tex-fmt;
           };
