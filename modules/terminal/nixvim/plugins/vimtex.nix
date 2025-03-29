@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
     plugins.vimtex = {
@@ -10,4 +10,6 @@
       };
     };
   };
+
+  home.packages = [ pkgs.tectonic-unwrapped ]; # tectonic compiler
 }
