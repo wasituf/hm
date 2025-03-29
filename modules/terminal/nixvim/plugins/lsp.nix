@@ -66,6 +66,7 @@
         svelte.enable = true;
         tailwindcss.enable = true;
         templ.enable = true;
+        texlab.enable = true;
         ts_ls.enable = true;
         # unocss = true;
         # vala_ls.enable = true;
@@ -109,6 +110,9 @@
           markdown = [
             "biome-check"
             "biome-organize-imports"
+          ];
+          latex = [
+            "tex-fmt"
           ];
           css = [
             "biome-check"
@@ -184,6 +188,9 @@
           # prettier = {
           #   command = lib.getExe pkgs.nodePackages_latest.prettier;
           # };
+          tex-fmt = {
+            command = lib.getExe pkgs.tex-fmt;
+          };
           stylua = {
             command = lib.getExe pkgs.stylua;
           };

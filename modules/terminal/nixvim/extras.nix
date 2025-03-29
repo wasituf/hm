@@ -3,6 +3,8 @@
   programs.nixvim = {
     extraPackages = with pkgs; [
       # vimPlugins.tailwind-tools-nvim
+      tectonic-unwrapped
+
       ripgrep
       fzf
     ];
