@@ -166,55 +166,23 @@
           ];
         };
         formatters = {
-          shfmt = {
-            command = lib.getExe pkgs.shfmt;
-          };
-          rustfmt = {
-            command = lib.getExe pkgs.rustfmt;
-          };
-          biome-check = {
-            command = lib.getExe pkgs.biome;
-          };
-          biome-organize-imports = {
-            command = lib.getExe pkgs.biome;
-          };
-          black = {
-            command = lib.getExe pkgs.black;
-          };
-          # prettierd = {
-          #   command = lib.getExe pkgs.prettierd;
-          # };
-          # prettier = {
-          #   command = lib.getExe pkgs.nodePackages_latest.prettier;
-          # };
-          mdformat = {
-            command = lib.getExe pkgs.mdformat;
-          };
-          tex-fmt = {
-            command = lib.getExe pkgs.tex-fmt;
-          };
-          stylua = {
-            command = lib.getExe pkgs.stylua;
-          };
-          gofumpt = {
-            command = lib.getExe pkgs.gofumpt;
-          };
-          goimports = {
-            command = lib.getExe' pkgs.gotools "goimports";
-          };
-          golines = {
-            command = lib.getExe' pkgs.golines "golines";
-          };
-          nixfmt = {
-            command = lib.getExe pkgs.nixfmt-rfc-style;
-          };
-          squeeze_blanks = {
-            command = lib.getExe' pkgs.coreutils "cat";
-          };
-          tailwind_sort = {
-            command = {
-              __raw = ''function() return vim.cmd("TailwindSort") end'';
-            };
+          shfmt.command = lib.getExe pkgs.shfmt;
+          rustfmt.command = lib.getExe pkgs.rustfmt;
+          biome-check.command = lib.getExe pkgs.biome;
+          biome-organize-imports.command = lib.getExe pkgs.biome;
+          black.command = lib.getExe pkgs.black;
+          # prettierd.command = lib.getExe pkgs.prettierd;
+          # prettier.command = lib.getExe pkgs.nodePackages_latest.prettier;
+          mdformat.command = lib.getExe pkgs.mdformat;
+          tex-fmt.command = lib.getExe pkgs.tex-fmt;
+          stylua.command = lib.getExe pkgs.stylua;
+          gofumpt.command = lib.getExe pkgs.gofumpt;
+          goimports.command = lib.getExe' pkgs.gotools "goimports";
+          golines.command = lib.getExe' pkgs.golines "golines";
+          nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
+          squeeze_blanks.command = lib.getExe' pkgs.coreutils "cat";
+          tailwind_sort.command = {
+            __raw = ''function() return vim.cmd("TailwindSort") end'';
           };
         };
       };
