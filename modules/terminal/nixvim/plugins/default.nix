@@ -1,9 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./auto-session.nix
     ./cmp.nix
     ./conjure.nix
+    ./extra-plugins.nix
     ./fzf-lua.nix
     ./gitsigns.nix
     ./hmts.nix
