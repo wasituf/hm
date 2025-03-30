@@ -168,12 +168,6 @@
               desc = "LSP Finder";
             };
           };
-          "gc" = {
-            action = "lsp_code_actions";
-            options = {
-              desc = "Code Actions";
-            };
-          };
           "gi" = {
             action = "lsp_implementations";
             options = {
@@ -184,6 +178,24 @@
             action = "lsp_typedefs";
             options = {
               desc = "Find Type Definitions";
+            };
+          };
+          "gra" = {
+            action = "lsp_code_actions";
+            options = {
+              desc = "LSP Code Actions";
+            };
+          };
+          "grr" = {
+            action = "lsp_references";
+            options = {
+              desc = "Find References";
+            };
+          };
+          "gri" = {
+            action = "lsp_implementations";
+            options = {
+              desc = "Find Implementations";
             };
           };
 
@@ -226,6 +238,12 @@
             };
           };
           "<leader>ss" = {
+            action = "lsp_document_symbols";
+            options = {
+              desc = "Document Symbols";
+            };
+          };
+          "gO" = {
             action = "lsp_document_symbols";
             options = {
               desc = "Document Symbols";
