@@ -32,6 +32,12 @@ in
     programs.nixvim = {
       enable = true;
       defaultEditor = true;
+      diagnostics = {
+        virtual_lines = {
+          current_line = true;
+        };
+        virtual_text = false;
+      };
       colorscheme = cfg.colorscheme;
       clipboard.providers = {
         xclip.enable = true;
