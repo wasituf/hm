@@ -11,6 +11,7 @@
       timeoutlen = 300;
 
       background = "dark";
+      winborder = "rounded";
 
       # Line numbers
       relativenumber = true;
