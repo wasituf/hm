@@ -38,6 +38,12 @@
                 FloatBorder = { bg = "none" },
                 FloatTitle = { bg = "none" },
 
+                BlinkCmpMenu = { bg = "none" },
+                BlinkCmpMenuBorder = { bg = "none" },
+                BlinkCmpMenuSelection = { bg = "none" },
+                BlinkCmpDoc = { bg = "none" },
+                BlinkCmpDocBorder = { bg = "none" },
+
                 -- Popular plugins that open floats will link to NormalFloat by default;
                 -- set their background accordingly if you wish to keep them dark and borderless
                 -- LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
