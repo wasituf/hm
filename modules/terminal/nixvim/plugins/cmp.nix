@@ -123,12 +123,14 @@
             "select_prev"
             "fallback"
           ];
-          "L" = [
+          "<C-o>" = [
             "show"
             "show_documentation"
             "hide_documentation"
+            "fallback"
           ];
           "<C-l>" = [
+            "show"
             "select_and_accept"
           ];
           "<Down>" = [
