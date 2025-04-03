@@ -12,9 +12,17 @@
           dim = {
             enabled = true;
           };
-          # indent = {
-          #   enabled = true;
-          # };
+          indent = {
+            enabled = true;
+            chunk = {
+              enabled = false;
+              char = {
+                corner_top = "╭";
+                corner_bottom = "╰";
+                arrow = "─";
+              };
+            };
+          };
           input = {
             enabled = true;
           };

@@ -32,6 +32,8 @@
 
               return {
                 MiniIndentscopeSymbol = { fg = theme.ui.nontext },
+                SnacksIndent = { fg = theme.ui.bg_p2 },
+                SnacksIndentScope = { fg = theme.ui.nontext },
 
                 -- Disable float bg
                 NormalFloat = { bg = "none" },
@@ -61,7 +63,7 @@
 
                 MarkviewCheckboxUnchecked = { fg = palette.waveRed },
 
-                GitSignsCurrentLineBlame = { fg = "#505068" }
+                GitSignsCurrentLineBlame = { fg = theme.ui.nontext }
               }
             end
           '';

@@ -22,24 +22,24 @@
           };
         };
         icons = { };
-        indentscope = {
-          draw = {
-            delay = 1;
-            animation = {
-              __raw = ''require("mini.indentscope").gen_animation.quadratic({ easing = "out", duration = 100, unit = "total" })'';
-            };
-          };
-          mappings = {
-            # Textobjects
-            object_scope = "hh";
-            object_scope_with_border = "ai";
-
-            # Motions (jump to respective border line; if not present - body line)
-            goto_top = "[h";
-            goto_bottom = "]h";
-          };
-          symbol = "▎";
-        };
+        # indentscope = {
+        #   draw = {
+        #     delay = 1;
+        #     animation = {
+        #       __raw = ''require("mini.indentscope").gen_animation.quadratic({ easing = "out", duration = 100, unit = "total" })'';
+        #     };
+        #   };
+        #   mappings = {
+        #     # Textobjects
+        #     object_scope = "hh";
+        #     object_scope_with_border = "ai";
+        #
+        #     # Motions (jump to respective border line; if not present - body line)
+        #     goto_top = "[h";
+        #     goto_bottom = "]h";
+        #   };
+        #   symbol = "▎";
+        # };
         surround = {
           mappings = {
             add = "gsa";
