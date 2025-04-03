@@ -108,7 +108,7 @@
             "biome-organize-imports"
           ];
           markdown = [
-            "mdformat"
+            "prettierd"
           ];
           latex = [
             "tex-fmt"
@@ -171,9 +171,8 @@
           biome-check.command = lib.getExe pkgs.biome;
           biome-organize-imports.command = lib.getExe pkgs.biome;
           black.command = lib.getExe pkgs.black;
-          # prettierd.command = lib.getExe pkgs.prettierd;
+          prettierd.command = lib.getExe pkgs.prettierd;
           # prettier.command = lib.getExe pkgs.nodePackages_latest.prettier;
-          mdformat.command = lib.getExe pkgs.mdformat;
           tex-fmt.command = lib.getExe pkgs.tex-fmt;
           stylua.command = lib.getExe pkgs.stylua;
           gofumpt.command = lib.getExe pkgs.gofumpt;
