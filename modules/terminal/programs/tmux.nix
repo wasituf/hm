@@ -51,6 +51,8 @@ in
 
       # String config
       extraConfig = ''
+        set-option -g xterm-keys on
+
         # Unbind defaults
         unbind C-b
         unbind %
@@ -74,24 +76,22 @@ in
         bind-key D kill-session
 
         # Smart pane switching with awareness of Neovim splits.
-        is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
-          | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
-        bind-key -n M-m if -F "#{@pane-is-vim}" 'send-keys C-h'  'select-pane -L'
-        bind-key -n M-n if -F "#{@pane-is-vim}" 'send-keys C-j'  'select-pane -D'
-        bind-key -n M-e if -F "#{@pane-is-vim}" 'send-keys C-k'  'select-pane -U'
-        bind-key -n M-i if -F "#{@pane-is-vim}" 'send-keys C-l'  'select-pane -R'
+        bind-key -n M-m if -F "#{@pane-is-vim}" 'send-keys M-m'  'select-pane -L'
+        bind-key -n M-n if -F "#{@pane-is-vim}" 'send-keys M-n'  'select-pane -D'
+        bind-key -n M-e if -F "#{@pane-is-vim}" 'send-keys M-e'  'select-pane -U'
+        bind-key -n M-i if -F "#{@pane-is-vim}" 'send-keys M-i'  'select-pane -R'
 
         # Smart pane resizing with awareness of Neovim splits.
-        bind-key -n M-M if -F "#{@pane-is-vim}" 'send-keys M-h' 'resize-pane -L 2'
-        bind-key -n M-N if -F "#{@pane-is-vim}" 'send-keys M-j' 'resize-pane -D 2'
-        bind-key -n M-E if -F "#{@pane-is-vim}" 'send-keys M-k' 'resize-pane -U 2'
-        bind-key -n M-I if -F "#{@pane-is-vim}" 'send-keys M-l' 'resize-pane -R 2'
+        bind-key -n M-M if -F "#{@pane-is-vim}" 'send-keys M-M' 'resize-pane -L 2'
+        bind-key -n M-N if -F "#{@pane-is-vim}" 'send-keys M-N' 'resize-pane -D 2'
+        bind-key -n M-E if -F "#{@pane-is-vim}" 'send-keys M-E' 'resize-pane -U 2'
+        bind-key -n M-I if -F "#{@pane-is-vim}" 'send-keys M-I' 'resize-pane -R 2'
 
         tmux_version='$(tmux -V | sed -En "s/^tmux ([0-9]+(.[0-9]+)?).*/\1/p")'
         if-shell -b '[ "$(echo "$tmux_version < 3.0" | bc)" = 1 ]' \
-        "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\'  'select-pane -l'"
+            "bind-key -n 'C-\\' if -F \"#{@pane-is-vim}\" 'send-keys C-\\'  'select-pane -l'"
         if-shell -b '[ "$(echo "$tmux_version >= 3.0" | bc)" = 1 ]' \
-        "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\\\'  'select-pane -l'"
+            "bind-key -n 'C-\\' if -F \"#{@pane-is-vim}\" 'send-keys C-\\\\'  'select-pane -l'"
 
         bind-key -T copy-mode-vi 'M-m' select-pane -L
         bind-key -T copy-mode-vi 'M-n' select-pane -D

@@ -3,6 +3,7 @@
   programs.nixvim = {
     plugins.smart-splits = {
       enable = true;
+      lazyLoad.enable = false;
       settings = {
         default_amount = 2;
         resize_mode = {
@@ -21,70 +22,94 @@
     keymaps = [
       # Resizing splits
       {
-        action = "<cmd>SmartResizeLeft<CR>";
-        key = "<A-M>";
+        action = {
+          __raw = ''require('smart-splits').resize_left'';
+        };
+        key = "<M-M>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Resize Left";
       }
       {
-        action = "<cmd>SmartResizeDown<CR>";
-        key = "<A-N>";
+        action = {
+          __raw = ''require('smart-splits').resize_down'';
+        };
+        key = "<M-N>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Resize Down";
       }
       {
-        action = "<cmd>SmartResizeUp<CR>";
-        key = "<A-E>";
+        action = {
+          __raw = ''require('smart-splits').resize_up'';
+        };
+        key = "<M-E>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Resize Up";
       }
       {
-        action = "<cmd>SmartResizeRight<CR>";
-        key = "<A-I>";
+        action = {
+          __raw = ''require('smart-splits').resize_right'';
+        };
+        key = "<M-I>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Resize Right";
       }
 
       # Moving between splits
       {
-        action = "<cmd>SmartCursorMoveLeft<CR>";
-        key = "<A-m>";
+        action = {
+          __raw = ''require('smart-splits').move_cursor_left'';
+        };
+        key = "<M-m>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Move Left";
       }
       {
-        action = "<cmd>SmartCursorMoveDown<CR>";
-        key = "<A-n>";
+        action = {
+          __raw = ''require('smart-splits').move_cursor_down'';
+        };
+        key = "<M-n>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Move Down";
       }
       {
-        action = "<cmd>SmartCursorMoveUp<CR>";
-        key = "<A-e>";
+        action = {
+          __raw = ''require('smart-splits').move_cursor_up'';
+        };
+        key = "<M-e>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Move Up";
       }
       {
-        action = "<cmd>SmartCursorMoveRight<CR>";
-        key = "<A-i>";
+        action = {
+          __raw = ''require('smart-splits').move_cursor_right'';
+        };
+        key = "<M-i>";
         mode = [
           "n"
           "x"
         ];
+        options.desc = "Smart Splits Move Right";
       }
     ];
   };
