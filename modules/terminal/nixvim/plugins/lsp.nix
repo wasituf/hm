@@ -16,7 +16,7 @@
         astro.enable = true;
         bashls.enable = true;
         biome.enable = true;
-        # cssls.enable = true;
+        cssls.enable = true;
         # css_variables.enable = true;
         # denols.enable = true;
         docker_compose_language_service.enable = true;
