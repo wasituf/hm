@@ -5,7 +5,6 @@
       enable = true;
       mockDevIcons = true;
       modules = {
-        cursorword = { };
         pairs = { };
         comment = {
           custom_commentstring = {
