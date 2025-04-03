@@ -33,6 +33,14 @@
             };
           }
           {
+            __unkeyed-1 = "<leader>c";
+            group = "code";
+            icon = {
+              icon = " ";
+              color = "blue";
+            };
+          }
+          {
             __unkeyed-1 = "<leader>e";
             group = "eval";
             icon = {
@@ -98,7 +106,7 @@
           }
           {
             __unkeyed-1 = "<leader>x";
-            group = "lists";
+            group = "trouble";
             icon = {
               icon = "󱖫 ";
               color = "green";

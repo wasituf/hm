@@ -180,6 +180,12 @@
               desc = "Find Type Definitions";
             };
           };
+          "ca" = {
+            action = "lsp_code_actions";
+            options = {
+              desc = "LSP Code Actions";
+            };
+          };
           "gra" = {
             action = "lsp_code_actions";
             options = {

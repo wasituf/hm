@@ -52,7 +52,7 @@
         action = {
           __raw = ''function() Snacks.zen() end'';
         };
-        key = "<leader>z";
+        key = "<leader>tz";
         options = {
           desc = "Toggle Zen Mode";
         };
@@ -61,7 +61,7 @@
         action = {
           __raw = ''function() Snacks.zen.zoom() end'';
         };
-        key = "<leader>Z";
+        key = "<leader>tZ";
         options = {
           desc = "Toggle Zoom Mode";
         };
