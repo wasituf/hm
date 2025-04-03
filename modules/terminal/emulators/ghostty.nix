@@ -28,7 +28,7 @@ in
       (config.lib.nixGL.wrap pkgs.ghostty)
     ];
     home.file.".config/ghostty/config".text = ''
-      font-family=JetBrainsMono NF
+      font-family=JetBrainsMono NFM
       font-size=12
       font-style=Medium
       font-style-bold=Bold
