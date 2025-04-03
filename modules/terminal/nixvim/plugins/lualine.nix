@@ -31,9 +31,9 @@
           lualine_a = [
             {
               __unkeyed-1 = "mode";
-              fmt = {
-                __raw = "function(str) return '󱅻 ' end";
-              };
+              # fmt = {
+              #   __raw = "function(str) return '󱅻 ' end";
+              # };
             }
           ];
           lualine_b = [
