@@ -31,6 +31,12 @@
           e = "";
         };
       };
+      sources = [
+        "filesystem"
+        "buffers"
+        "git_status"
+        "document_symbols"
+      ];
     };
     keymaps = [
       {
@@ -41,7 +47,7 @@
             end
           '';
         };
-        key = "<leader>fe";
+        key = "<leader>f.";
         mode = [
           "n"
           "x"
@@ -58,13 +64,48 @@
             end
           '';
         };
-        key = "<leader>be";
+        key = "<leader>b.";
         mode = [
           "n"
           "x"
         ];
         options = {
           desc = "Buffers in NeoTree";
+        };
+      }
+      {
+        action = {
+          __raw = ''
+            function()
+              require("neo-tree.command").execute({ source = "git_status", toggle = true })
+            end
+          '';
+        };
+        key = "<leader>g.";
+        mode = [
+          "n"
+          "x"
+        ];
+        options = {
+          desc = "Git Status in NeoTree";
+        };
+      }
+      {
+        action = {
+          __raw = ''
+            function()
+              require("neo-tree.command").execute({ source = "document_symbols", toggle = true,
+                position = "right" })
+            end
+          '';
+        };
+        key = "<leader>c.";
+        mode = [
+          "n"
+          "x"
+        ];
+        options = {
+          desc = "Symbols in NeoTree";
         };
       }
     ];
