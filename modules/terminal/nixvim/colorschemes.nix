@@ -39,16 +39,9 @@
                 FloatTitle = { bg = "none" },
 
                 BlinkCmpMenu = { bg = "none" },
-                BlinkCmpMenuBorder = { bg = "none" },
-                BlinkCmpMenuSelection = { bg = "none" },
-                BlinkCmpDoc = { bg = "none" },
-                BlinkCmpDocBorder = { bg = "none" },
+                BlinkCmpMenuBorder = { bg = "none", fg = theme.ui.float.fg_border },
 
-                -- Popular plugins that open floats will link to NormalFloat by default;
-                -- set their background accordingly if you wish to keep them dark and borderless
-                -- LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
-
-                Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1, blend = vim.o.pumblend },  -- add `blend = vim.o.pumblend` to enable transparency
+                Pmenu = { fg = theme.ui.shade0, bg = "none", blend = vim.o.pumblend },  -- add `blend = vim.o.pumblend` to enable transparency
                 PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
                 PmenuSbar = { bg = theme.ui.bg_m1 },
                 PmenuThumb = { bg = theme.ui.bg_p2 },

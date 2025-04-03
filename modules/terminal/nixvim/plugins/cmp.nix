@@ -56,25 +56,33 @@
       enable = true;
       settings = {
         appearance = {
-          nerd_font_variant = "normal";
+          nerd_font_variant = "mono";
         };
         completion = {
           documentation = {
             auto_show = true;
-            window = {
-              border = "rounded";
-            };
+            auto_show_delay_ms = 200;
+            # window = {
+            #   border = "rounded";
+            # };
           };
           ghost_text.enabled = true;
           menu = {
-            border = "rounded";
+            # border = "rounded";
+            scrolloff = 0;
+            scrollbar = true;
+            draw = {
+              treesitter = {
+                __raw = ''{ "lsp" },'';
+              };
+            };
           };
         };
         signature = {
           enabled = true;
-          window = {
-            border = "rounded";
-          };
+          # window = {
+          #   border = "rounded";
+          # };
         };
         sources = {
           default = [
@@ -82,19 +90,12 @@
             "snippets"
             "path"
             "emoji"
-            "nerdfont"
-            "latex_symbols"
             "buffer"
           ];
           providers = {
             emoji = {
               module = "blink-emoji";
               name = "Emoji";
-              # score_offset = 15;
-            };
-            nerdfont = {
-              name = "nerdfont";
-              module = "blink.compat.source";
             };
             latex_symbols = {
               name = "latex_symbols";
@@ -110,9 +111,6 @@
             "scroll_documentation_up"
             "fallback"
           ];
-          # "<C-e>" = [
-          #   "hide"
-          # ];
           "<C-u>" = [
             "scroll_documentation_down"
             "fallback"
@@ -145,14 +143,9 @@
       };
     };
 
-    blink-compat = {
-      enable = true;
-    };
-
-    blink-emoji = {
-      enable = true;
-    };
-
+    blink-compat.enable = true;
+    cmp-latex-symbols.enable = true;
+    blink-emoji.enable = true;
     friendly-snippets.enable = true;
 
     luasnip = {
@@ -176,14 +169,5 @@
         ];
       };
     };
-
-    # lspkind = {
-    #   enable = true;
-    #   mode = "symbol_text";
-    #   cmp = {
-    #     ellipsisChar = "...";
-    #     maxWidth = 50;
-    #   };
-    # };
   };
 }
