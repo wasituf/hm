@@ -14,6 +14,12 @@
           };
           indent = {
             enabled = true;
+            indent = {
+              char = "┃";
+            };
+            scope = {
+              char = "┃";
+            };
             chunk = {
               enabled = false;
               char = {
