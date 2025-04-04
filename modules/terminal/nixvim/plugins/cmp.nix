@@ -66,7 +66,7 @@
             #   border = "rounded";
             # };
           };
-          ghost_text.enabled = true;
+          ghost_text.enabled = false;
           menu = {
             # border = "rounded";
             scrolloff = 0;
