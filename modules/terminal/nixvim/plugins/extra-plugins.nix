@@ -3,6 +3,7 @@
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [
       eyeliner-nvim
+      numb-nvim
       supermaven-nvim
       whitespace-nvim
     ];
@@ -33,8 +34,13 @@
         return_cursor = true,
       })
 
-      -- remove trailing whitespace with a keybinding
-      -- vim.keymap.set('n', '<Leader>t', require('whitespace-nvim').trim)
+      require('numb').setup({
+        show_numbers = true,
+        show_cursorline = true,
+        hide_relativenumbers = true,
+        number_only = false,
+        centered_peeking = true,
+      })
     '';
   };
 }
