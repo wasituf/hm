@@ -110,7 +110,7 @@
           markdown = [
             "prettierd"
           ];
-          latex = [
+          tex = [
             "tex-fmt"
           ];
           css = [
