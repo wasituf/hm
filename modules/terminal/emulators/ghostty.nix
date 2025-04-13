@@ -25,7 +25,7 @@ in
 
   config = mkIf cfg.enable {
     home.packages = [
-      (config.lib.nixGL.wrap pkgs.ghostty)
+      pkgs.ghostty
     ];
     home.file.".config/ghostty/config".text = ''
       font-family=JetBrainsMono NF

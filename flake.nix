@@ -12,10 +12,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixgl = {
-      url = "github:nix-community/nixGL";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +26,6 @@
     {
       nixpkgs,
       home-manager,
-      nixgl,
       nixvim,
       spicetify-nix,
       minimal-tmux,
@@ -41,7 +36,6 @@
       user = "wasituf";
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ nixgl.overlay ];
       };
     in
     {
@@ -58,7 +52,6 @@
 
         extraSpecialArgs = {
           inherit user;
-          inherit nixgl;
           inherit spicetify-nix;
           inherit minimal-tmux;
         };

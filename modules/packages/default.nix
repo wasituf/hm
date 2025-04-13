@@ -24,11 +24,11 @@ in
       # desktop
       # (config.lib.nixGL.wrap gitbutler)
       # gimp
-      (config.lib.nixGL.wrap hoppscotch)
-      inkscape-with-extensions
+      # (config.lib.nixGL.wrap hoppscotch)
+      # inkscape-with-extensions
 
       # misc
-      any-nix-shell
+      # any-nix-shell
       gum
 
       # scripts
